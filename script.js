@@ -12,7 +12,7 @@ function getComputerChoice() {
         return String("Paper")
     }
     else (randomNumber === 2) ;{
-        return String("Scissor")
+        return String("Scissors")
     }
 
     }
