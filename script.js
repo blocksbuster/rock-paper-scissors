@@ -17,23 +17,18 @@ function getComputerChoice() {
 
     }
 
+let randomPC = getComputerChoice()
+console.log(randomPC)
 
-    // function computerChoice() {
-    //     if (computerChoice = 0) {
-    //         let computerChoice = "Rock"
-    //         return computerChoice
-    //     }
-    //     else if (computerChoice = 1) {
-    //         let computerChoice = "Paper"
-    //         return computerChoice
-    //     }
-    //     else (computerChoice = 2) {
-    //         let computerChoice = "Scissor"
-    //         return computerChoice
-    //     }
+function getHumanChoice() {
+    let humanchoice = String(prompt("Please enter your choice: "))
+    if (humanchoice === "Rock" || humanchoice === "rock")
+        return String("You've chosen rock")
+    else if (humanchoice === "Paper" || humanchoice === "paper") 
+        return String("You've chosen Paper")
+    else (humanchoice === "Scissors" || humanchoice === "scissors" || humanchoice === "Scissor" || humanchoice === "scissor")
+        return String("You've chosen Scissors")
+}
 
-
-    
-
-let random = getComputerChoice()
-console.log(random)
+let randomHuman = getHumanChoice()
+console.log(randomHuman)
