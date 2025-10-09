@@ -32,3 +32,6 @@ function getHumanChoice() {
 
 let randomHuman = getHumanChoice()
 console.log(randomHuman)
+
+let humanScore = 0
+let computerScore = 0
