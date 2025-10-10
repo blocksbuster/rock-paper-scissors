@@ -67,6 +67,16 @@
     let roundWinner = playRound(computerChoice, humanChoice)
     console.log(roundWinner)
 
+    if (roundWinner === "You won the round.") {
+            humanScore += 1
+            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)
+    }
+    if (roundWinner === "The Computer won the round.")  {
+            computerScore +=1
+            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)
+    }    
+    else 
+            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)   
    </script> 
 </body>
 </html>

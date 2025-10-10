@@ -55,3 +55,15 @@ function getHumanChoice() {
 
     let roundWinner = playRound(computerChoice, humanChoice)
     console.log(roundWinner)
+
+    if (roundWinner === "You won the round.") {
+            humanScore += 1
+            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)
+    }
+    if (roundWinner === "The Computer won the round.")  {
+            computerScore +=1
+            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)
+    }    
+    if  (roundWinner === "It's a tie!") {
+            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)
+    }    
