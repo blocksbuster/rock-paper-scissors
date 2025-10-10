@@ -1,4 +1,13 @@
-function getComputerChoice() {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function getComputerChoice() {
     function getRandomInt(max) {
         return Math.floor(Math.random() * max);
     }
@@ -17,10 +26,10 @@ function getComputerChoice() {
 
     }
 
-let computerChoice = getComputerChoice()
-console.log(computerChoice)
+    let computerChoice = getComputerChoice()
+    console.log(computerChoice)
 
-function getHumanChoice() {
+    function getHumanChoice() {
     let humanChoice = String(prompt("Please enter your choice: ").toLowerCase())
     if (humanChoice === "rock")
         return String("Rock")
@@ -55,3 +64,6 @@ function getHumanChoice() {
 
     let roundWinner = playRound(computerChoice, humanChoice)
     console.log(roundWinner)
+   </script> 
+</body>
+</html>
