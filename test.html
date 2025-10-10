@@ -51,19 +51,22 @@
         else if (computerChoice === "Scissors" && humanChoice === "Paper")
             return String("The Computer won the round.")
         else if (computerChoice === "Rock" && humanChoice === "Scissors")
-            return String("The Computer won the round")
+            return String("The Computer won the round.")
         else if (computerChoice === "Rock" && humanChoice === "Paper")
            return String("You won the round.")
         else if (computerChoice === "Scissors" && humanChoice === "Rock")
             return String("You won the round.")
-        else if (computerChoice === "Paper" && humanChoice === "Rock")
-            return String("You won the round")
+        else if (computerChoice === "Paper" && humanChoice === "Scissors")
+            return String("You won the round.")
         else 
             return String("It's a tie!")
-    }
+ } 
+  
+
 
     let roundWinner = playRound(computerChoice, humanChoice)
     console.log(roundWinner)
+
    </script> 
 </body>
 </html>

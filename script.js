@@ -47,7 +47,7 @@ function getHumanChoice() {
            return String("You won the round.")
         else if (computerChoice === "Scissors" && humanChoice === "Rock")
             return String("You won the round.")
-        else if (computerChoice === "Paper" && humanChoice === "Rock")
+        else if (computerChoice === "Paper" && humanChoice === "Scissors")
             return String("You won the round")
         else 
             return String("It's a tie!")
