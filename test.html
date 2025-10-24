@@ -7,76 +7,113 @@
 </head>
 <body>
    <script>
-    function getComputerChoice() {
-    function getRandomInt(max) {
-        return Math.floor(Math.random() * max);
-    }
 
-    let randomNumber = getRandomInt(3); 
+    function playGame() {
+
+        function getComputerChoice() {
+            function getRandomInt(max){
+            return Math.floor(Math.random() * max);
+        }
+
+        let randomNumber = getRandomInt(3); 
     
-    if (randomNumber === 0) {
+        if (randomNumber === 0) {
         return String("Rock")
-    }
-    else if (randomNumber === 1) {
+        }
+        else if (randomNumber === 1) {
         return String("Paper")
-    }
-    else (randomNumber === 2) ;{
+        }
+        else (randomNumber === 2) ;{
         return String("Scissors")
+        }
     }
+        
+        function getHumanChoice() {
+        let humanChoice = String(prompt("Please enter your choice: ").toLowerCase())
+        if (humanChoice === "rock")
+            return String("Rock")
+        else if (humanChoice === "paper") 
+            return String("Paper")
+        else (humanChoice === "scissors" || humanChoice === "scissor")
+            return String("Scissors")
+        }
 
+        let humanScore = 0
+        let computerScore = 0 
+
+        function playRound(getComputerChoice, getHumanChoice) {
+            let result = ""
+            if (getComputerChoice === getHumanChoice) {
+            result = "It's a tie!"
+            }
+        else if  (
+            (getComputerChoice === "Paper" && getHumanChoice === "Rock") ||
+            (getComputerChoice === "Scissors" && getHumanChoice === "Paper") ||
+            (getComputerChoice === "Rock" && getHumanChoice === "Scissors")
+            )
+            {result = "The Computer won the round."
+            computerScore++
+            }
+        else {
+            result = "You won the round."
+            humanScore++
+        }
+        console.log(result)
+        console.log("Current score: You " + humanScore + " Computer Score " + computerScore)
+        }
+
+        console.log("Let's play a Game of Rock, Paper, Scissors!")
+        console.log("First Round")
+        let humanChoice1 = getHumanChoice()
+        let computerChoice1= getComputerChoice()
+        console.log("You chose ", humanChoice1)
+        console.log("Computer chose ", computerChoice1)
+        playRound(computerChoice1, humanChoice1)
+
+
+        console.log("Second Round")
+        let humanChoice2 = getHumanChoice()
+        let computerChoice2 = getComputerChoice()
+        console.log("You chose ", humanChoice2)
+        console.log("Computer chose ", computerChoice2)
+        playRound(computerChoice2, humanChoice2)
+
+        console.log("Third Round")
+        let humanChoice3 = getHumanChoice()
+        let computerChoice3 =  getComputerChoice()
+        console.log("You chose ", humanChoice3)
+        console.log("Computer chose ", computerChoice3) 
+        playRound(computerChoice3, humanChoice3)    
+        
+        console.log("Fourth Round")
+        let humanChoice4 = getHumanChoice()
+        let computerChoice4= getComputerChoice()
+        console.log("You chose ", humanChoice4)
+        console.log("Computer chose ", computerChoice4) 
+        playRound(computerChoice4, humanChoice4)        
+
+        console.log("Fifth Round")
+        let humanChoice5 = getHumanChoice()
+        let computerChoice5= getComputerChoice()
+        console.log("You chose ", humanChoice5)
+        console.log("Computer chose ", computerChoice5)
+        playRound(computerChoice5, humanChoice5)  
+
+        function getFinalScore() {
+            if (humanScore > computerScore)
+            return console.log("You won the Game.")
+            else if (computerScore > humanScore)
+            return console.log("The Computer won the Game")
+            else
+            return console.log("No one won the game. The Game is tied.")
+
+        }
+
+        getFinalScore()
     }
+    
 
-    let computerChoice = getComputerChoice()
-    console.log(computerChoice)
-
-    function getHumanChoice() {
-    let humanChoice = String(prompt("Please enter your choice: ").toLowerCase())
-    if (humanChoice === "rock")
-        return String("Rock")
-    else if (humanChoice === "paper") 
-        return String("Paper")
-    else (humanChoice === "scissors" || humanchoice === "scissor")
-        return String("Scissors")
-    }
-
-    let humanChoice = getHumanChoice()
-    console.log(humanChoice)
-
-    let humanScore = 0
-    let computerScore = 0
-
-    function playRound(computerChoice, humanChoice) {
-        if (computerChoice === "Paper" && humanChoice === "Rock")
-           return String("The Computer won the round.")
-        else if (computerChoice === "Scissors" && humanChoice === "Paper")
-            return String("The Computer won the round.")
-        else if (computerChoice === "Rock" && humanChoice === "Scissors")
-            return String("The Computer won the round.")
-        else if (computerChoice === "Rock" && humanChoice === "Paper")
-           return String("You won the round.")
-        else if (computerChoice === "Scissors" && humanChoice === "Rock")
-            return String("You won the round.")
-        else if (computerChoice === "Paper" && humanChoice === "Scissors")
-            return String("You won the round.")
-        else 
-            return String("It's a tie!")
- } 
-  
-
-
-    let roundWinner = playRound(computerChoice, humanChoice)
-    console.log(roundWinner)
-
-    if (roundWinner === "You won the round.") {
-            humanScore += 1
-            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)
-    }
-    if (roundWinner === "The Computer won the round.")  {
-            computerScore +=1
-            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)
-    }    
-    else 
-            console.log("The current score is: You " + humanScore + " The Computer " + computerScore)   
+    playGame()  
    </script> 
 </body>
 </html>
