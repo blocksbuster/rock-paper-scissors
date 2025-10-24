@@ -87,6 +87,18 @@
         console.log("You chose ", humanChoice5)
         console.log("Computer chose ", computerChoice5)
         playRound(computerChoice5, humanChoice5)  
+
+        function getFinalScore() {
+            if (humanScore > computerScore)
+            return console.log("You won the Game.")
+            else if (computerScore > humanScore)
+            return console.log("The Computer won the Game")
+            else
+            return console.log("No one won the game. The Game is tied.")
+
+        }
+
+        getFinalScore()
     }
     
 
