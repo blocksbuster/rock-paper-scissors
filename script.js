@@ -52,6 +52,7 @@
         console.log("Current score: You " + humanScore + " Computer Score " + computerScore)
         }
 
+        console.log("Let's play a Game of Rock, Paper, Scissors.")
         console.log("First Round")
         let humanChoice1 = getHumanChoice()
         let computerChoice1= getComputerChoice()
